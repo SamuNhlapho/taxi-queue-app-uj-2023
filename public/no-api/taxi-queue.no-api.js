@@ -56,9 +56,13 @@ document.addEventListener('alpine:init', () => {
 			this.addToJoinQueue -= 12
 		} 
 		
-	 }
+	 },
 
+	 clearQueue () {
+		this.addToJoinQueue = 0;
+		this.addOnTaxiQueue = 0;
 
+	}
 
 
 	}
