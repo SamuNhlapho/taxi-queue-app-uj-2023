@@ -41,7 +41,8 @@ app.post('/api/taxi/depart', (req, res) => {
 
 
 // return the number of people in the queue
-app.get('/api/passenger/queue', (req, res) => {
+app.get('/api/passenger/queue', async (req, res) => {
+    const queue = await db.all(`select * COUNT(passenger_queue_count) FROM taxi_queue `)
     //  return test the API call
     res.json({
         queueCount : 7
