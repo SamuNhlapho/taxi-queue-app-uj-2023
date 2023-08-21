@@ -40,7 +40,7 @@ export async function taxiQueueLength() {
 
 export async function taxiDepart() {
    const result = await db.get('select passenger_queue_count, taxi_queue_count, from taxi_queue');
-   if (result.passenger_queue_count>=12 && taxi_queue_count >0 )
-   await db.run ('update taxi_queue set passenger_queue_count = passenger_queue_count -12, taxi_queue_count = taxi_queue_count -1')
+   if (result.passenger_queue_count >=12 && taxi_queue_count >0 )
+   await db.run ('update taxi_queue set passenger_queue_count = passenger_queue_count -12, taxi_queue_count = taxi_queue_count -1');
 
 }

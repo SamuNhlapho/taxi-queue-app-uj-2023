@@ -163,7 +163,7 @@ describe('The taxi queue app', function() {
 		taxiDepart();
 		
 		// data after a taxi departed
-		assert.equal(0,await queueLength());
+		assert.equal(0,await taxiQueueLength());
 		assert.equal(15, await queueLength());
 
 	});
